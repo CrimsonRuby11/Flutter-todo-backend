@@ -7,7 +7,7 @@ exports.createToDo = async (req, res, next) => {
         let todo = await toDoServices.createToDo(userId, title, desc, false);
 
         res.json({status: true, success: todo});
-    } catch(error) {
+    } catch(err) {
         next(err);
     }
 };
