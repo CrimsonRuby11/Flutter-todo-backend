@@ -8,7 +8,7 @@ exports.createToDo = async (req, res, next) => {
 
         res.json({status: true, success: todo});
     } catch(err) {
-        next(err);
+        throw err;
     }
 };
 
