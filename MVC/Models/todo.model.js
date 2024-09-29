@@ -16,12 +16,7 @@ const todoSchema = new Schema({
     desc: {
         type: String,
         required: true
-    },
-    isDone: {
-        type: Boolean,
-        required: true
     }
-
 });
 
 const TodoModel = db.model('todo', todoSchema);

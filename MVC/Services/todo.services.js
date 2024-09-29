@@ -2,7 +2,7 @@ const todoModel = require('../Models/todo.model');
 
 class ToDoServices {
 
-    static async createToDo(userId, title, desc, isDone) {
+    static async createToDo(userId, title, desc) {
         const todoObject = new todoModel({userId, title, desc});
         return await todoObject.save();
     }

@@ -4,11 +4,11 @@ exports.createToDo = async (req, res, next) => {
     try {
         const {userId, title, desc} = req.body;
 
-        let todo = await toDoServices.createToDo(userId, title, desc, false);
+        let todo = await toDoServices.createToDo(userId, title, desc);
 
         res.json({status: true, success: todo});
     } catch(err) {
-        throw err;
+        next(err);
     }
 };
 
